@@ -1,0 +1,24 @@
+body {
+    background-color: rgb(82, 0, 31);
+    font-family: Arial;
+}
+
+h1 {
+    color: white;
+    font-size: 110%;
+}
+
+h2 {
+    color: white;
+    font-size: 105%;
+}
+
+h3, h4, h5, h6 {
+    color: white;
+    font-size: 100%;
+}
+
+p {
+    color: white;
+    font-size: 100%;
+}
