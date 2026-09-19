@@ -7,68 +7,127 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Registro de nuevos estudiantes</h1>
-    <fieldset>
-        <legend>Información Personal</legend>
-        <div>
-            <label for="nombre">Nombres Completos</label>
-            <input type="text" id="nombre" name="nombre" required>
-        </div>
-        <div>
-            <label for="codigo">Código de estudiante</label>
-            <input type="text" id="codigo" name="codigo" required pattern="[0-9]{8}">
-        </div>
-        <div>
-            <label for="fecha">Fecha de nacimiento</label>
-            <input type="date" id="nacimiente" name="nacimiento" required>
-        </div>
-        <div>
-            <label for="edad">Edad</label>
-            <input type="number" id="edad" name="edad" required>
-        </div>
-        <div>
-            <label for="carrera">Carrera profesional</label>
-            <select name="carrera" id="carrera" required>
-                <option value="">-- Selecciona una carrera --</option>
-                <option value="sistemas">Ingeniería de Sistemas</option>
-            </select>
-        </div>
-        <div>
-            <label for="turno">Turno</label>
+    <form action="/procesar" method="post" class="form-container">
+        <h1>Registro de nuevos estudiantes</h1>
+        <p>Complete todos los espacios en blanco</p>
+        <fieldset>
+            <legend>Información Personal</legend>
             <div>
-                <input type="radio" id="turno-manaña" name="turno" required>
-                <label for="turno-manaña">Mañana</label>
+                <label for="nombre">Nombres Completos</label>
+                <input type="text" id="nombre" name="nombre" required minlength="2" maxlength="60"
+                placeholder="Ej. Fernando Riveros">
             </div>
             <div>
-                <input type="radio" id="turno-tarde" name="turno" required>
-                <label for="turno-tarde">Tarde</label>
+                <label for="codigo">Código de estudiante</label>
+                <input type="text" id="codigo" name="codigo" required pattern="[0-9]{8}"
+                placeholder="Ej. 20261234">
             </div>
             <div>
-                <input type="radio" id="turno-noche" name="turno" required>
-                <label for="turno-noche">Noche</label>
+                <label for="nacimiento">Fecha de nacimiento</label>
+                <input type="date" id="nacimiento" name="nacimiento" required min="1960-01-01" max="2009-01-01">
             </div>
-        </div>
-    </fieldset>
-    <fieldset>
-        <legend>Información de la Cuenta</legend>
-        <div>
-            <label for="correo">Correo institucional</label>
-            <input type="email" id="correo" name="correo" required>
-        </div>
-        <div>
-            <label for="contraseña">Contraseña</label>
-            <input type="password" id="contraseña" name="contraseña" required>
-        </div>
-        <div>
-            <label for="comentario">Comentarios</label>
             <div>
-                <textarea name="comentario" id="comentario"></textarea>
+                <label for="edad">Edad</label>
+                <input type="number" id="edad" name="edad" required min="17" max="100"
+                placeholder="17-100">
             </div>
-        </div>
+            <div>
+                <label for="carrera">Carrera profesional</label>
+                <select name="carrera" id="carrera" required>
+                    <option value="administracion">-- Seleccione una carrera --</option>
+                    <option value="administracion">Administración</option>
+                    <option value="agronomia">Agronomía</option>
+                    <option value="antropologia">Antropología</option>
+                    <option value="arquitectura">Arquitectura</option>
+                    <option value="artes">Artes</option>
+                    <option value="banca-seguros">Banca y Seguros</option>
+                    <option value="biologia">Biología</option>
+                    <option value="ciencia-computacion">Ciencia de la Computación</option>
+                    <option value="ciencias-comunicacion">Ciencias de la Comunicación</option>
+                    <option value="ciencias-nutricion">Ciencias de la Nutrición</option>
+                    <option value="contabilidad">Contabilidad</option>
+                    <option value="derecho">Derecho</option>
+                    <option value="economia">Economía</option>
+                    <option value="educacion">Educación</option>
+                    <option value="enfermeria">Enfermería</option>
+                    <option value="filosofia">Filosofía</option>
+                    <option value="fisica">Física</option>
+                    <option value="gestion">Gestión</option>
+                    <option value="historia">Historia</option>
+                    <option value="ing-ambiental">Ingeniería Ambiental</option>
+                    <option value="ing-civil">Ingeniería Civil</option>
+                    <option value="ing-electrica">Ingeniería Eléctrica</option>
+                    <option value="ing-electronica">Ingeniería Electrónica</option>
+                    <option value="ing-geofisica">Ingeniería Geofísica</option>
+                    <option value="ing-geologica">Ingeniería Geológica</option>
+                    <option value="ing-industrial">Ingeniería Industrial</option>
+                    <option value="ing-industrias-alimentarias">Ingeniería de Industrias Alimentarias</option>
+                    <option value="ing-materiales">Ingeniería de Materiales</option>
+                    <option value="ing-mecanica">Ingeniería Mecánica</option>
+                    <option value="ing-metalurgica">Ingeniería Metalúrgica</option>
+                    <option value="ing-minas">Ingeniería de Minas</option>
+                    <option value="ing-pesquera">Ingeniería Pesquera</option>
+                    <option value="ing-quimica">Ingeniería Química</option>
+                    <option value="sistemas">Ingeniería de Sistemas</option>
+                    <option value="ing-telecomunicaciones">Ingeniería de Telecomunicaciones</option>
+                    <option value="literatura-linguistica">Literatura y Lingüística</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="matematicas">Matemáticas</option>
+                    <option value="medicina">Medicina</option>
+                    <option value="psicologia">Psicología</option>
+                    <option value="quimica">Química</option>
+                    <option value="relaciones-industriales">Relaciones Industriales</option>
+                    <option value="sanidad-vegetal">Sanidad Vegetal</option>
+                    <option value="sociologia">Sociología</option>
+                    <option value="trabajo-social">Trabajo Social</option>
+                    <option value="turismo-hoteleria">Turismo y Hotelería</option>
+                    <option value="zootecnia">Zootecnia</option>
+                </select>
+            </div>
+            <div>
+                <label for="turno">Turno</label>
+                <div>
+                    <input type="radio" id="turno-manana" name="turno" value="manana" required>
+                    <label for="turno-manana">Mañana</label>
+                </div>
+                <div>
+                    <input type="radio" id="turno-tarde" name="turno" value="tarde" required>
+                    <label for="turno-tarde">Tarde</label>
+                </div>
+                <div>
+                    <input type="radio" id="turno-noche" name="turno" value="noche" required>
+                    <label for="turno-noche">Noche</label>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Información de la Cuenta</legend>
+            <div>
+                <label for="correo">Correo institucional</label>
+                <input type="email" id="correo" name="correo" required
+                placeholder="usuario@universidad.edu.pe">
+            </div>
+            <div>
+                <label for="contraseña">Contraseña</label>
+                <input type="password" id="contraseña" name="contraseña" required minlength="8" 
+                pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}"
+                placeholder="Mín. 8 caracteres, 1 mayúscula y un número">
+            </div>
+            <div>
+                <label for="comentario">Comentarios</label>
+                <div>
+                    <textarea name="comentario" id="comentario" maxlength="300" placeholder="máx. 300 caracteres"></textarea>
+                </div>
+            </div>
+            <div>
+                <input type="checkbox" id="terminos" name="terminos" required>
+                <label for="terminos">Acepto los términos y condiciones</label>
+            </div>
+        </fieldset>
         <div>
-            <input type="checkbox" id="terminos" name="terminos" required>
-            <label for="terminos">Acepto los términos y condiciones</label>
+            <button type="submit">Registrarme</button>
+            <button type="reset">Limpiar</button>
         </div>
-    </fieldset>
+    </form>
 </body>
 </html>
