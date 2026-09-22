@@ -11,7 +11,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Portal Académico</a>
-            <button class="navbar-toggler" type="button" data-bs-togle="collapse" data-bs-target="navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -28,7 +28,7 @@
     </nav>
     <section class="hero">
         <div class="hero-text">
-            <h1>Motivació</h1>
+            <h1>Motivación</h1>
             <p>El camino hacia el éxito académico requiere constancia, disciplina y las herramientas correctas. 
                 Gestiona tus horarios y toma el control total de tu aprendizaje desde cualquier lugar</p>
         </div>
@@ -39,14 +39,39 @@
     <section class="cursos">
         <h2>Cursos Ofertados</h2>
         <div class="card-grid">
-            <div class="cursos-card"><h3>Introduccion al Desarrollo Web</h3><p>HTML y CSS</p></div>
+            <div class="cursos-card"><h3>Introducción al Desarrollo Web</h3><p>HTML y CSS</p></div>
             <div class="cursos-card"><h3>Desarrollo de Software Orientado a Objetos</h3><p>Java</p></div>
-            <div class="cursos-card"><h3>Calculo en una Variable</h3><p>Funciones y Limites</p></div>
+            <div class="cursos-card"><h3>Cálculo en una Variable</h3><p>Funciones y Limites</p></div>
             <div class="cursos-card"><h3>Estructuras Discretas II</h3><p>Gafos y Arboles</p></div>
             <div class="cursos-card"><h3>Taller de Narrativa Digital</h3><p>Storytelling</p></div>
             <div class="cursos-card"><h3>Realidad Nacional</h3><p>Estado</p></div>
         </div>
     </section>
+    <section class="py-5">
+        <div class="container">
+            <h2 class="mb-4">Noticias y Eventos</h2>
+            <div class="card" style="max-width: 24rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Inicio de matrícula</h5>
+                    <p class="card-text">La matrícula 2026-II inicia el 9 de noviembre</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalInfo">Mas información</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="modalInfo" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Inicio de matrícula</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>La matrícula regular inicia el 9 de noviembre y se realiza de forma virtual</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
