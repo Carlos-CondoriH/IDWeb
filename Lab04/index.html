@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gestión de Tareas Académicas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container">
+    <h1 class="mb-3">Gestión de Tareas Académicass</h1>
+    <div id="alertas"></div>
+    <form id="form-tarea" class="row g-2 mb-3" novalidate>
+        <div class="col-md-3"><input id="titulo" class="form-control" placeholder="Título"></div>
+        <div class="col-md-3"><input id="curso" class="form-control" placeholder="Curso"></div>
+        <div class="col-md-3"><input id="fecha" type="date" class="form-control"></div>
+        <div class="col-md-3"><button class="btn btn-primary w-100">Agregar</button></div>
+    </form>
+    <div id="filtros" class="btn-group mb-3">
+        <button class="btn btn-outline-secondary" data-filtro="todas">Todas</button>
+        <button class="btn btn-outline-secondary" data-filtro="pendientes">Pendientes</button>
+        <button class="btn btn-outline-secondary" data-filtro="completadas">Completadas</button>
+    </div>
+    <p id="contador" class="text-muted"></p>
+    <ul id="lista" class="list-group"></ul>
+    <script src="app.js"></script>
+    </body>
+</html>
