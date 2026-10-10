@@ -1,0 +1,1 @@
+const cursos = require("../data/cursos");
